@@ -2,7 +2,7 @@ from src.speech.wishper_transcribe import transcribe_with_timestamps
 from src.speech.audio_utils import slice_audio_segments
 from src.speech.emotion_model import EmotionRecognizer
 
-AUDIO_FILE = "harvard.wav"
+AUDIO_FILE = "src/datasets/harvard.wav"
 
 print("Transcribing...")
 result = transcribe_with_timestamps(AUDIO_FILE)
@@ -19,8 +19,9 @@ print("\nDetecting emotions...")
 emotion_model = EmotionRecognizer()
 
 for seg in segments:
-    emotion = emotion_model.predict_emotion(seg["file"])
+    emotion , confidence = emotion_model.predict_emotion(seg["file"])
 
     print("Text:", seg["text"])
     print("Emotion:", emotion)
+    print("Confidence:", confidence)
     print("-" * 50)
