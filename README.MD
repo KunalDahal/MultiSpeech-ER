@@ -8,5 +8,4 @@ A Python pipeline that transcribes speech and detects emotions from audio segmen
 - **Emotion Detection**: Classifies speech segments into four emotions (happy, angry, neutral, sad)
 - **Confidence Scoring**: Displays prediction confidence percentage for each emotion
 - **GPU Acceleration**: Automatically utilizes CUDA if available for faster processing
-- **Debug Logging**: Provides detailed progress updates during pipeline execution
 - **Audio Slicing**: Automatically segments audio based on transcription timestamps
