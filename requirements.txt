@@ -5,3 +5,4 @@ openai-whisper
 transformers
 librosa
 soundfile
+moviepy
